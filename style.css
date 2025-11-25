@@ -315,9 +315,10 @@ td {
   display: inline-block;
   background: #000000;
   color: #ffffff;
-  padding: 0.2rem 0.6rem;
+  padding: 0.2rem 0.55rem; /* slightly tighter so it fits easier */
   border-radius: 0.25rem;
   border: 2px solid #000000;
+  white-space: nowrap; /* 🔑 keep "#1 SHRIMP STAR" on one line */
 }
 
 .combo-price-area {
