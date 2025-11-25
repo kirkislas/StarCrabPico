@@ -232,14 +232,14 @@ td {
   color: #111111;
   display: flex;
   align-items: center;
-  /* ⬇️ Keep content aligned to the left so we have a fixed "icons" column */
+  /* Keep content aligned to the left so we have a fixed "icons" column */
   justify-content: flex-start;
 }
 
 .spice-label {
   margin-right: 0.4rem;
-  /* ⬇️ Give every label the same width so the first chili lines up vertically */
-  flex: 0 0 22%;
+  /* Give every label the same width so the first chili lines up vertically */
+  flex: 0 0 25%;
 }
 
 /* Align first chili vertically for all rows, but closer to card center */
@@ -247,7 +247,6 @@ td {
   display: inline-flex;
   justify-content: flex-start;
   padding-top: 0.3rem;
-  /* no big min-width; the fixed label width handles alignment */
 }
 
 .spice-icons i {
@@ -305,7 +304,7 @@ td {
   gap: 0.6rem;
 }
 
-/* ✅ THE ONLY WHITE TEXT ON THE SITE */
+/* ✅ THE ONLY WHITE TEXT ON THE SITE — same for all combo titles */
 .combo-title {
   margin: 0;
   font-size: 0.95rem;
@@ -315,10 +314,9 @@ td {
   display: inline-block;
   background: #000000;
   color: #ffffff;
-  padding: 0.2rem 0.55rem; /* slightly tighter so it fits easier */
+  padding: 0.2rem 0.6rem;
   border-radius: 0.25rem;
   border: 2px solid #000000;
-  white-space: nowrap; /* 🔑 keep "#1 SHRIMP STAR" on one line */
 }
 
 .combo-price-area {
@@ -479,19 +477,23 @@ td {
 }
 
 /* =====================================
-	 MOBILE-ONLY TWEAKS (TITLE / BADGE)
+	 MOBILE-ONLY TWEAKS
+	 (move "MAKE IT ALL SHRIMP" pill to bottom-right)
 	 ===================================== */
 
-@media (max-width: 480px) {
-  /* Slightly shrink title + badge so "#1 Shrimp Star" fits on one line */
-  .combo-title {
-    font-size: 0.85rem;
-    padding: 0.15rem 0.5rem;
+@media (max-width: 899.98px) {
+  /* Only cards that have a promo-badge (i.e., #1 Shrimp Star)
+	   will visually show this pill in the corner. Other cards
+	   behave the same, just with a little extra bottom space. */
+  .combo-card {
+    position: relative;
+    padding-bottom: 1.6rem; /* room for the pill */
   }
 
-  .promo-badge {
-    font-size: 0.7rem;
-    padding: 0.15rem 0.45rem;
+  .combo-header .promo-badge {
+    position: absolute;
+    right: 0.9rem;
+    bottom: 0.75rem;
   }
 }
 
