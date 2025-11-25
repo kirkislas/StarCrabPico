@@ -601,7 +601,7 @@ td {
   .combos article:nth-of-type(2) .combo-header .promo-badge {
     position: absolute;
     right: 0.9rem;
-    bottom: 2.1rem; /* approx. same vertical zone as "(3 lbs of seafood)" */
+    bottom: 3rem; /* approx. same vertical zone as "(3 lbs of seafood)" */
     /* overlap is allowed; no overflow hidden on the card */
   }
 }
