@@ -232,14 +232,12 @@ td {
   color: #111111;
   display: flex;
   align-items: center;
-  /* Keep content aligned to the left so we have a fixed "icons" column */
   justify-content: flex-start;
 }
 
 .spice-label {
   margin-right: 0.4rem;
-  /* Give every label the same width so the first chili lines up vertically */
-  flex: 0 0 25%;
+  flex: 0 0 22%; /* fixed width so first chili lines up */
 }
 
 /* Align first chili vertically for all rows, but closer to card center */
@@ -304,7 +302,7 @@ td {
   gap: 0.6rem;
 }
 
-/* ✅ THE ONLY WHITE TEXT ON THE SITE — same for all combo titles */
+/* ✅ THE ONLY WHITE TEXT ON THE SITE */
 .combo-title {
   margin: 0;
   font-size: 0.95rem;
@@ -477,27 +475,6 @@ td {
 }
 
 /* =====================================
-	 MOBILE-ONLY TWEAKS
-	 (move "MAKE IT ALL SHRIMP" pill to bottom-right)
-	 ===================================== */
-
-@media (max-width: 899.98px) {
-  /* Only cards that have a promo-badge (i.e., #1 Shrimp Star)
-	   will visually show this pill in the corner. Other cards
-	   behave the same, just with a little extra bottom space. */
-  .combo-card {
-    position: relative;
-    padding-bottom: 1.6rem; /* room for the pill */
-  }
-
-  .combo-header .promo-badge {
-    position: absolute;
-    right: 0.9rem;
-    bottom: 0.75rem;
-  }
-}
-
-/* =====================================
 	 DESKTOP LAYOUT
 	 ===================================== */
 
@@ -605,5 +582,25 @@ td {
 
   .beer-grid {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* =====================================
+	 MOBILE – reposition "MAKE IT ALL SHRIMP" pill
+	 so it sits lower in the #1 Shrimp Star card
+	 without affecting desktop or other combos
+	 ===================================== */
+
+@media (max-width: 899.98px) {
+  /* Target only the first combo card (#1 Shrimp Star) */
+  .combos article:first-of-type {
+    position: relative;
+    padding-bottom: 2.3rem; /* room for pill near bottom */
+  }
+
+  .combos article:first-of-type .combo-header .promo-badge {
+    position: absolute;
+    right: 0.9rem;
+    bottom: 1.5rem; /* approx. around the "(3 lbs of seafood)" line */
   }
 }
