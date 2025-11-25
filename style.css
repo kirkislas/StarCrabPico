@@ -587,20 +587,21 @@ td {
 
 /* =====================================
 	 MOBILE – reposition "MAKE IT ALL SHRIMP" pill
-	 so it sits lower in the #1 Shrimp Star card
-	 without affecting desktop or other combos
+	 for the #1 Shrimp Star card only
 	 ===================================== */
 
 @media (max-width: 899.98px) {
-  /* Target only the first combo card (#1 Shrimp Star) */
-  .combos article:first-of-type {
+  /* Second combo-card article = #1 Shrimp Star
+	   (first is Cajun Special) */
+  .combos article:nth-of-type(2) {
     position: relative;
-    padding-bottom: 2.3rem; /* room for pill near bottom */
+    padding-bottom: 2.3rem; /* give room near bottom for the pill */
   }
 
-  .combos article:first-of-type .combo-header .promo-badge {
+  .combos article:nth-of-type(2) .combo-header .promo-badge {
     position: absolute;
     right: 0.9rem;
-    bottom: 1.5rem; /* approx. around the "(3 lbs of seafood)" line */
+    bottom: 2.1rem; /* approx. same vertical zone as "(3 lbs of seafood)" */
+    /* overlap is allowed; no overflow hidden on the card */
   }
 }
