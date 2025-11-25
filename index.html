@@ -1,0 +1,559 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Star Crab Pico Official Menu</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <h1 class="brand-title">Star Crab</h1>
+        <p class="brand-tagline">Pico Rivera Official Menu</p>
+      </div>
+
+      <nav class="menu-toggle">
+        <button class="tab-button active" data-target="front-menu">
+          Front of Menu
+        </button>
+        <button class="tab-button" data-target="back-menu">Back of Menu</button>
+      </nav>
+    </header>
+
+    <main class="page">
+      <!-- ======================================================
+           FRONT OF MENU
+           ====================================================== -->
+      <section id="front-menu" class="menu-panel active">
+        <div class="front-layout">
+          <!-- LEFT COLUMN WRAPPER: Step 1, 2, 3 -->
+          <div class="front-left-column">
+            <!-- STEP 1 -->
+            <section class="step step-1 card">
+              <h2 class="step-title">STEP 1: Pick your favorite!</h2>
+
+              <!-- Half & Full Pounds -->
+              <div class="seafood-section">
+                <h3 class="section-heading">Half and Full Pounds</h3>
+
+                <table class="seafood-table">
+                  <thead>
+                    <tr>
+                      <th>Seafood</th>
+                      <th class="align-right">Market Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Shrimp</td>
+                      <td class="align-right">$16.95 per pound</td>
+                    </tr>
+                    <tr>
+                      <td>Crawfish</td>
+                      <td class="align-right">$16.95 per pound</td>
+                    </tr>
+                    <tr>
+                      <td>Green Mussels</td>
+                      <td class="align-right">$15.95 per pound</td>
+                    </tr>
+                    <tr>
+                      <td>Black Mussels</td>
+                      <td class="align-right">$15.95 per pound</td>
+                    </tr>
+                    <tr>
+                      <td>Clams</td>
+                      <td class="align-right">$15.95 per pound</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p class="disclaimer">
+                All shrimp comes with the head on by default. Ask for peeled or
+                headless (extra charge).
+              </p>
+
+              <!-- Full Orders Only -->
+              <div class="full-orders">
+                <div class="image-and-label">
+                  <h3 class="section-heading">
+                    Full orders only (no half pounds)
+                  </h3>
+                </div>
+
+                <table class="full-orders-table">
+                  <thead>
+                    <tr>
+                      <th>Seafood</th>
+                      <th>Full Order</th>
+                      <th class="align-right">Market Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Scallop</td>
+                      <td>1 lb</td>
+                      <td class="align-right">$29.95</td>
+                    </tr>
+                    <tr>
+                      <td>Snow Crab Legs</td>
+                      <td>2 clusters (2 sets of legs)</td>
+                      <td class="align-right">$39.95</td>
+                    </tr>
+                    <tr>
+                      <td>King Crab Legs</td>
+                      <td>1 lb</td>
+                      <td class="align-right">$105.95</td>
+                    </tr>
+                    <tr>
+                      <td>Lobster Tails</td>
+                      <td>2 tails</td>
+                      <td class="align-right">$39.95</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Dungeness
+                        <span class="inline-warning"
+                          >Please allow 40 minutes – longer cook time.</span
+                        >
+                      </td>
+                      <td>entire crab</td>
+                      <td class="align-right">$39.95</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <!-- STEP 2 -->
+            <section class="step step-2 card">
+              <h2 class="step-title">STEP 2: Pick your flavor!</h2>
+
+              <ul class="basic-list">
+                <li>No sauce (plain)</li>
+                <li>Butter only</li>
+                <li>Garlic Butter</li>
+                <li>Lemon Pepper</li>
+                <li>Cajun</li>
+                <li>
+                  Full House (Garlic Butter, Lemon Pepper &amp; Cajun)
+                  <span class="most-popular-badge">Most popular</span>
+                </li>
+              </ul>
+            </section>
+
+            <!-- STEP 3 -->
+            <section class="step step-3 card">
+              <h2 class="step-title">STEP 3: Pick your spice level!</h2>
+
+              <ul class="spice-list">
+                <li class="spice-row">
+                  <span class="spice-label">No Spice</span>
+                  <span class="spice-icons"></span>
+                </li>
+                <li class="spice-row">
+                  <span class="spice-label">Mild</span>
+                  <span class="spice-icons">
+                    <i class="fa-solid fa-pepper-hot"></i>
+                  </span>
+                </li>
+                <li class="spice-row">
+                  <span class="spice-label">Medium</span>
+                  <span class="spice-icons">
+                    <i class="fa-solid fa-pepper-hot"></i>
+                    <i class="fa-solid fa-pepper-hot"></i>
+                  </span>
+                </li>
+                <li class="spice-row">
+                  <span class="spice-label">Spicy</span>
+                  <span class="spice-icons">
+                    <i class="fa-solid fa-pepper-hot"></i>
+                    <i class="fa-solid fa-pepper-hot"></i>
+                    <i class="fa-solid fa-pepper-hot"></i>
+                  </span>
+                </li>
+                <li class="spice-row">
+                  <span class="spice-label">Extra Spicy</span>
+                  <span class="spice-icons">
+                    <i class="fa-solid fa-pepper-hot"></i>
+                    <i class="fa-solid fa-pepper-hot"></i>
+                    <i class="fa-solid fa-pepper-hot"></i>
+                    <i class="fa-solid fa-pepper-hot"></i>
+                  </span>
+                </li>
+              </ul>
+            </section>
+          </div>
+
+          <!-- RIGHT COLUMN WRAPPER: Add-ins & Sides + Combos -->
+          <div class="front-right-column">
+            <!-- ADD-INS & SIDES -->
+            <section class="card addins">
+              <h2 class="section-heading">Add-ins &amp; Sides</h2>
+
+              <ul class="addins-list">
+                <li>
+                  <span class="item-name">Corn</span>
+                  <span class="item-dots"></span>
+                  <span class="item-price">$1.50</span>
+                </li>
+                <li>
+                  <span class="item-name">Potato (3pcs)</span>
+                  <span class="item-dots"></span>
+                  <span class="item-price">$2.50</span>
+                </li>
+                <li>
+                  <span class="item-name">Sausage</span>
+                  <span class="item-dots"></span>
+                  <span class="item-price">$2.99</span>
+                </li>
+                <li>
+                  <span class="item-name">Boiled Eggs (2pcs)</span>
+                  <span class="item-dots"></span>
+                  <span class="item-price">$2.99</span>
+                </li>
+                <li>
+                  <span class="item-name">Garlic Bread (2pcs)</span>
+                  <span class="item-dots"></span>
+                  <span class="item-price">$2.99</span>
+                </li>
+                <li>
+                  <span class="item-name">Steamed Rice</span>
+                  <span class="item-dots"></span>
+                  <span class="item-price">$2.99</span>
+                </li>
+                <li>
+                  <span class="item-name">Extra Sauce (8oz)</span>
+                  <span class="item-dots"></span>
+                  <span class="item-price">$4.00</span>
+                </li>
+                <li class="policy-note">
+                  1 sauce per pound. No pound, no sauce.
+                </li>
+
+                <!-- Peeled Shrimp upcharges -->
+                <li class="subsection-label">Peeled Shrimp (extra charge)</li>
+                <li class="sub-item">
+                  <span class="item-name">1/2 lb</span>
+                  <span class="item-dots"></span>
+                  <span class="item-price">+ $1.50</span>
+                </li>
+                <li class="sub-item">
+                  <span class="item-name">1 lb</span>
+                  <span class="item-dots"></span>
+                  <span class="item-price">+ $3.00</span>
+                </li>
+
+                <!-- Headless Shrimp upcharges -->
+                <li class="subsection-label">Headless Shrimp (extra charge)</li>
+                <li class="sub-item">
+                  <span class="item-name">1/2 lb</span>
+                  <span class="item-dots"></span>
+                  <span class="item-price">+ $0.75</span>
+                </li>
+                <li class="sub-item">
+                  <span class="item-name">1 lb</span>
+                  <span class="item-dots"></span>
+                  <span class="item-price">+ $1.50</span>
+                </li>
+              </ul>
+
+              <p class="disclaimer">
+                All shrimp comes with the head on by default. Ask for peeled or
+                headless (extra charge).
+              </p>
+            </section>
+
+            <!-- COMBOS -->
+            <section class="combos card">
+              <!-- Special Combo -->
+              <h2 class="section-heading">Special Combo</h2>
+              <article class="combo-card">
+                <header class="combo-header">
+                  <h3 class="combo-title">Cajun Special</h3>
+                  <div class="combo-price-area">
+                    <span class="combo-price">$29.99</span>
+                  </div>
+                </header>
+                <p class="combo-description">
+                  1/2 lb of shrimp, 1 cluster of snow crab, 1 corn, 2 potatoes.
+                </p>
+                <p class="note-small">
+                  This is the only way to get a half order of snow crab (1
+                  cluster).
+                </p>
+                <div class="combo-meta">
+                  <p class="combo-weight">(1 pound of seafood)</p>
+                  <p class="combo-serves">*Great meal for one person</p>
+                </div>
+              </article>
+
+              <!-- Family Combos -->
+              <h2 class="section-heading family-heading">Family Combos</h2>
+
+              <!-- #1 Shrimp Star -->
+              <article class="combo-card">
+                <header class="combo-header">
+                  <h3 class="combo-title">#1 Shrimp Star</h3>
+                  <div class="combo-price-area">
+                    <span class="combo-price">$50.99</span>
+                    <span class="promo-badge">make it all shrimp (+$2)</span>
+                  </div>
+                </header>
+                <p class="combo-description">
+                  1 lb of shrimp, 2 corn, 3 potatoes, 1 sausage<br />
+                  2 choices (1 lb each) - green mussels, black mussels, clams,
+                  crawfish (+$1), shrimp (+$1)
+                </p>
+                <div class="combo-meta">
+                  <p class="combo-weight">(3 lbs of seafood)</p>
+                  <p class="combo-serves">*Great for parties of 2-3 people</p>
+                </div>
+              </article>
+
+              <!-- #2 Crab Star -->
+              <article class="combo-card">
+                <header class="combo-header">
+                  <h3 class="combo-title">#2 Crab Star</h3>
+                  <div class="combo-price-area">
+                    <span class="combo-price">$88.99</span>
+                  </div>
+                </header>
+                <p class="combo-description">
+                  2 clusters of snow crab, 1 lb of shrimp, 1 lb of crawfish, 1
+                  lb of green mussels, 4 corn, 3 potatoes, 1 sausage
+                </p>
+                <div class="combo-meta">
+                  <p class="combo-weight">(4 pounds of seafood)</p>
+                  <p class="combo-serves">*Great for parties of 3-4 people</p>
+                </div>
+              </article>
+
+              <!-- #3 King Star -->
+              <article class="combo-card">
+                <header class="combo-header">
+                  <h3 class="combo-title">#3 King Star</h3>
+                  <div class="combo-price-area">
+                    <span class="combo-price">$189.99</span>
+                  </div>
+                </header>
+                <p class="combo-description">
+                  1 lb of king crab, 3 clusters of snow crab, 1 lobster tail, 1
+                  lb of shrimp, 1 lb of mussels, 1 lb of crawfish, 6 corn, 6
+                  potatoes, 2 sausages
+                </p>
+                <div class="combo-meta">
+                  <p class="combo-weight">(6 pounds of seafood)</p>
+                  <p class="combo-serves">*Great for parties of 5-6 people</p>
+                </div>
+              </article>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================
+           BACK OF MENU
+           ====================================================== -->
+      <section id="back-menu" class="menu-panel">
+        <div class="back-layout">
+          <!-- LEFT COLUMN: Fried sides/baskets + fries options -->
+          <div class="back-left-column">
+            <!-- FRIED SIDES + BASKETS (same card) -->
+            <section class="card fried-section">
+              <!-- Fried sides FIRST -->
+              <h2 class="section-heading">Fried Sides</h2>
+              <ul class="addins-list fried-sides-list">
+                <li>
+                  <span class="item-name">Mozzarella Sticks</span>
+                  <span class="item-dots"></span>
+                  <span class="item-price">$5.50</span>
+                </li>
+                <li>
+                  <span class="item-name">Fried Okra</span>
+                  <span class="item-dots"></span>
+                  <span class="item-price">$5.99</span>
+                </li>
+              </ul>
+
+              <!-- Then Fried Baskets title + items -->
+              <h2 class="section-heading fried-baskets-heading">
+                Fried Baskets
+              </h2>
+              <ul class="addins-list">
+                <li>
+                  <span class="item-name">Fried Calamari with Fries</span>
+                  <span class="item-dots"></span>
+                  <span class="item-price">$12.99</span>
+                </li>
+                <li>
+                  <span class="item-name">Chicken Wings with Fries</span>
+                  <span class="item-dots"></span>
+                  <span class="item-price">$13.99</span>
+                </li>
+                <li>
+                  <span class="item-name">Chicken Strips with Fries</span>
+                  <span class="item-dots"></span>
+                  <span class="item-price">$11.99</span>
+                </li>
+                <li>
+                  <span class="item-name">Butterflied Shrimp with Fries</span>
+                  <span class="item-dots"></span>
+                  <span class="item-price">$12.99</span>
+                </li>
+                <li>
+                  <span class="item-name">Breaded Cod Fish with Fries</span>
+                  <span class="item-dots"></span>
+                  <span class="item-price">$13.99</span>
+                </li>
+                <li>
+                  <span class="item-name">Breaded Cat Fish with Fries</span>
+                  <span class="item-dots"></span>
+                  <span class="item-price">$13.99</span>
+                </li>
+              </ul>
+
+              <p class="note-small">
+                Baskets include fries. You can choose your fry style from the
+                Fry Options section below (upcharges may apply).
+              </p>
+            </section>
+
+            <!-- FRIES & FRY OPTIONS -->
+            <section class="card fries-section">
+              <h2 class="section-heading">Fries &amp; Fry Options</h2>
+
+              <ul class="addins-list">
+                <li>
+                  <span class="item-name">Cajun Fries</span>
+                  <span class="item-dots"></span>
+                  <span class="item-price">$5.50</span>
+                </li>
+                <li>
+                  <span class="item-name">Regular Fries</span>
+                  <span class="item-dots"></span>
+                  <span class="item-price">$5.50</span>
+                </li>
+                <li>
+                  <span class="item-name">Lemon Pepper Fries</span>
+                  <span class="item-dots"></span>
+                  <span class="item-price">$5.99</span>
+                </li>
+                <li>
+                  <span class="item-name">Garlic Fries</span>
+                  <span class="item-dots"></span>
+                  <span class="item-price">$7.99</span>
+                </li>
+                <li>
+                  <span class="item-name">Sweet Potato Fries</span>
+                  <span class="item-dots"></span>
+                  <span class="item-price">$5.99</span>
+                </li>
+                <li>
+                  <span class="item-name">Onion Rings</span>
+                  <span class="item-dots"></span>
+                  <span class="item-price">$5.99</span>
+                </li>
+              </ul>
+
+              <p class="note-small">
+                Baskets that come with fries may substitute any fry option
+                listed here (upcharges may apply).
+              </p>
+            </section>
+          </div>
+
+          <!-- RIGHT COLUMN: Extra dishes + drinks -->
+          <div class="back-right-column">
+            <!-- EXTRA DISHES -->
+            <section class="card extra-dishes-section">
+              <h2 class="section-heading">Extra Dishes</h2>
+
+              <ul class="addins-list">
+                <li>
+                  <span class="item-name">Gumbo Soup (12 oz)</span>
+                  <span class="item-dots"></span>
+                  <span class="item-price">$8.99</span>
+                </li>
+                <li>
+                  <span class="item-name">Clam Chowder (12 oz)</span>
+                  <span class="item-dots"></span>
+                  <span class="item-price">$8.99</span>
+                </li>
+              </ul>
+            </section>
+
+            <!-- NON-ALCOHOLIC DRINKS -->
+            <section class="card drinks-section">
+              <h2 class="section-heading">Drinks (Non-Alcoholic)</h2>
+
+              <p class="note-small">
+                Regular drinks – <strong>$3.50</strong> &nbsp;|&nbsp; Kids
+                drinks – <strong>$2.50</strong>
+              </p>
+
+              <div class="drinks-grid">
+                <span class="drink-item">Water</span>
+                <span class="drink-item">Soda Water</span>
+                <span class="drink-item">Coke</span>
+                <span class="drink-item">Coke Zero</span>
+                <span class="drink-item">Sprite</span>
+                <span class="drink-item">Dr Pepper</span>
+                <span class="drink-item">Root Beer</span>
+                <span class="drink-item">Orange Fanta</span>
+                <span class="drink-item">Pink Lemonade</span>
+                <span class="drink-item">Fruit Punch</span>
+                <span class="drink-item">Sweet Tea</span>
+                <span class="drink-item">Unsweetened Iced Tea</span>
+                <span class="drink-item">Sweet Green Iced Tea</span>
+                <span class="drink-item">Raspberry Iced Tea</span>
+              </div>
+            </section>
+
+            <!-- BEER, SELTZERS & MICHELADAS -->
+            <section class="card beer-section">
+              <h2 class="section-heading">Beer, Seltzers &amp; Micheladas</h2>
+
+              <p class="note-small">
+                Single Beer or Seltzer – <strong>$5</strong><br />
+                Michelada – <strong>$10</strong><br />
+                Bucket (5 beers) – <strong>$20</strong>
+              </p>
+
+              <div class="drinks-grid beer-grid">
+                <span class="drink-item">Truly</span>
+                <span class="drink-item">Cayman Jack</span>
+                <span class="drink-item">Modelo</span>
+                <span class="drink-item">Modelo Negra</span>
+                <span class="drink-item">Dos X</span>
+                <span class="drink-item">Corona Extra</span>
+                <span class="drink-item">Corona Familiar</span>
+                <span class="drink-item">Pacifico</span>
+                <span class="drink-item">Stella</span>
+                <span class="drink-item">Heineken</span>
+                <span class="drink-item">Blue Moon</span>
+                <span class="drink-item">Lagunitas IPA</span>
+                <span class="drink-item">Victoria</span>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Star Crab. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
