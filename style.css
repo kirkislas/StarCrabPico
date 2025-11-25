@@ -589,7 +589,7 @@ td {
   /* Mobile-only tweak so "#1 SHRIMP STAR" stays on one line */
   @media (max-width: 480px) {
     .combo-title {
-      font-size: 0.85rem; /* slightly smaller just on small phones */
+      font-size: 0.8rem; /* slightly smaller just on small phones */
       white-space: nowrap; /* prevent wrapping onto two lines */
     }
   }
