@@ -478,6 +478,23 @@ td {
 }
 
 /* =====================================
+	 MOBILE-ONLY TWEAKS (TITLE / BADGE)
+	 ===================================== */
+
+@media (max-width: 480px) {
+  /* Slightly shrink title + badge so "#1 Shrimp Star" fits on one line */
+  .combo-title {
+    font-size: 0.85rem;
+    padding: 0.15rem 0.5rem;
+  }
+
+  .promo-badge {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.45rem;
+  }
+}
+
+/* =====================================
 	 DESKTOP LAYOUT
 	 ===================================== */
 
@@ -585,12 +602,5 @@ td {
 
   .beer-grid {
     grid-template-columns: 1fr 1fr;
-  }
-  /* Mobile-only tweak so "#1 SHRIMP STAR" stays on one line */
-  @media (max-width: 480px) {
-    .combo-title {
-      font-size: 0.7rem; /* slightly smaller just on small phones */
-      white-space: nowrap; /* prevent wrapping onto two lines */
-    }
   }
 }
