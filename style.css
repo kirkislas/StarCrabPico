@@ -468,19 +468,21 @@ td {
 /* Small-phone tweak: keep combo pills on one line but make them a bit narrower */
 @media (max-width: 390px) {
   .combo-header {
-    gap: 0.3rem; /* tighten the space between title and price/pill */
+    gap: 0.3rem;
   }
 
   .combo-title {
     font-size: 0.85rem;
     padding: 0.15rem 0.45rem;
-    white-space: nowrap; /* stay on one line */
+    white-space: nowrap;
   }
 
+  /* smaller chip, but allow wrapping */
   .promo-badge {
     font-size: 0.7rem;
     padding: 0.15rem 0.4rem;
-    white-space: nowrap; /* stay on one line */
+    white-space: normal; /* <— THIS is the big change */
+    line-height: 1.2;
   }
 }
 
@@ -497,17 +499,22 @@ td {
 
 /* Mobile-only: move shrimp promo pill to bottom-right */
 @media (max-width: 768px) {
-  .combos .combo-card:first-of-type {
-    position: relative;
+  /* keep header nice and tight on mobile */
+  .combo-header {
+    align-items: flex-start;
   }
 
-  .combos .combo-card:first-of-type .promo-badge {
-    position: absolute;
-    right: 0.8rem;
-    bottom: 0.8rem;
-    margin: 0;
-    transform: none;
-    z-index: 5;
+  .combo-price-area {
+    display: flex;
+    flex-direction: column; /* price on row 1, chip on row 2 */
+    align-items: flex-end;
+  }
+
+  .promo-badge {
+    margin-top: 0.25rem; /* space under the price */
+    font-size: 0.7rem;
+    padding: 0.15rem 0.5rem;
+    text-align: right;
   }
 }
 
