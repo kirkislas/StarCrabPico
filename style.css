@@ -515,6 +515,10 @@ td {
 	   DESKTOP LAYOUT
 	   ===================================== */
 
+/* =====================================
+   DESKTOP LAYOUT
+   ===================================== */
+
 @media (min-width: 900px) {
   .site-header {
     flex-direction: row;
@@ -603,16 +607,21 @@ td {
   .beer-grid {
     grid-template-columns: 1fr 1fr;
   }
-  /* Mobile safety net: prevent horizontal scroll if something is 1–2px too wide */
-  @media (max-width: 900px) {
-    html,
-    body {
-      overflow-x: hidden;
-    }
+}
 
-    .page {
-      max-width: 100%;
-      overflow-x: hidden;
-    }
+/* =====================================
+	 MOBILE SAFETY NET
+	 ===================================== */
+
+@media (max-width: 900px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .page {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 }
