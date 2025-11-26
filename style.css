@@ -465,6 +465,25 @@ td {
   color: #111111;
 }
 
+/* Small-phone tweak: keep combo pills on one line but make them a bit narrower */
+@media (max-width: 390px) {
+  .combo-header {
+    gap: 0.3rem; /* tighten the space between title and price/pill */
+  }
+
+  .combo-title {
+    font-size: 0.85rem;
+    padding: 0.15rem 0.45rem;
+    white-space: nowrap; /* stay on one line */
+  }
+
+  .promo-badge {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.4rem;
+    white-space: nowrap; /* stay on one line */
+  }
+}
+
 /* =====================================
 	   MOBILE-ONLY TWEAKS
 	   ===================================== */
@@ -583,5 +602,17 @@ td {
 
   .beer-grid {
     grid-template-columns: 1fr 1fr;
+  }
+  /* Mobile safety net: prevent horizontal scroll if something is 1–2px too wide */
+  @media (max-width: 900px) {
+    html,
+    body {
+      overflow-x: hidden;
+    }
+
+    .page {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
   }
 }
