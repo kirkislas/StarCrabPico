@@ -298,7 +298,6 @@ td {
   gap: 0.6rem;
 }
 
-/* Restored consistent combo title styling */
 .combo-title {
   margin: 0;
   font-size: 0.95rem;
@@ -467,9 +466,17 @@ td {
 }
 
 /* =====================================
-	   MOBILE FIX: MOVE SHRIMP PILL TO BOTTOM-RIGHT
+	   MOBILE-ONLY TWEAKS
 	   ===================================== */
 
+@media (max-width: 899px) {
+  /* Push chili column slightly to the right on mobile */
+  .spice-icons {
+    margin-left: 1.5rem;
+  }
+}
+
+/* Mobile-only: move shrimp promo pill to bottom-right */
 @media (max-width: 768px) {
   .combos .combo-card:first-of-type {
     position: relative;
@@ -533,6 +540,11 @@ td {
 
   .card {
     padding: 1.1rem 1.2rem;
+  }
+
+  /* Reset chili margin so desktop stays where you liked it */
+  .spice-icons {
+    margin-left: 0;
   }
 
   /* BACK DESKTOP GRID */
