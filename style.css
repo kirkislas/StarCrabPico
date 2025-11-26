@@ -586,8 +586,8 @@ td {
 }
 
 /* =====================================
-	 MOBILE – reposition "MAKE IT ALL SHRIMP" pill
-	 for the #1 Shrimp Star card only
+	 MOBILE – "MAKE IT ALL SHRIMP" as a sticker
+	 on #1 Shrimp Star only
 	 ===================================== */
 
 @media (max-width: 899.98px) {
@@ -595,13 +595,13 @@ td {
 	   (first is Cajun Special) */
   .combos article:nth-of-type(2) {
     position: relative;
-    padding-bottom: 2.3rem; /* give room near bottom for the pill */
+    /* no extra bottom padding, keep same height logic as others */
   }
 
   .combos article:nth-of-type(2) .combo-header .promo-badge {
     position: absolute;
     right: 0.9rem;
-    bottom: 3.5rem; /* approx. same vertical zone as "(3 lbs of seafood)" */
-    /* overlap is allowed; no overflow hidden on the card */
+    bottom: -0.4rem; /* sticker: slightly below the bottom of the text area */
+    /* pill can overlap the card edge a bit; no overflow hidden on card */
   }
 }
