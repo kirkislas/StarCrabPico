@@ -34,8 +34,8 @@ body {
 }
 
 /* =====================================
-	 HEADER & FRONT/BACK TOGGLE
-	 ===================================== */
+	   HEADER & FRONT/BACK TOGGLE
+	   ===================================== */
 
 .site-header {
   padding: 1rem 1.25rem;
@@ -51,7 +51,7 @@ body {
   font-size: 1.9rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: #f01e2c; /* red brand */
+  color: #f01e2c;
 }
 
 .brand-tagline {
@@ -80,15 +80,14 @@ body {
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-/* Active tab = filled pill, text stays dark */
 .tab-button.active {
   background-color: #f0f0f0;
   color: #000000;
 }
 
 /* =====================================
-	 PAGE & PANELS
-	 ===================================== */
+	   PAGE & PANELS
+	   ===================================== */
 
 .page {
   padding: 1rem;
@@ -106,8 +105,8 @@ body {
 }
 
 /* =====================================
-	 CARDS (white “paper” look)
-	 ===================================== */
+	   CARDS
+	   ===================================== */
 
 .card {
   background: #ffffff;
@@ -120,8 +119,8 @@ body {
 }
 
 /* =====================================
-	 HEADINGS & STEP TITLES
-	 ===================================== */
+	   HEADINGS
+	   ===================================== */
 
 .section-heading {
   margin: 0 0 0.6rem;
@@ -145,14 +144,13 @@ body {
   font-weight: 900;
 }
 
-/* extra spacing between fried sections */
 .fried-section .fried-baskets-heading {
   margin-top: 0.9rem;
 }
 
 /* =====================================
-	 TABLES
-	 ===================================== */
+	   TABLES
+	   ===================================== */
 
 table {
   width: 100%;
@@ -187,8 +185,8 @@ td {
 }
 
 /* =====================================
-	 DISCLAIMERS & WARNINGS
-	 ===================================== */
+	   DISCLAIMERS
+	   ===================================== */
 
 .disclaimer {
   margin-top: 0.7rem;
@@ -197,7 +195,6 @@ td {
   font-style: italic;
 }
 
-/* Dungeness warning chip */
 .inline-warning {
   display: block;
   font-size: 0.7rem;
@@ -208,7 +205,6 @@ td {
   border-radius: 999px;
 }
 
-/* Small helper text used on back menu and Cajun note */
 .note-small {
   margin-top: 0.4rem;
   font-size: 0.78rem;
@@ -216,8 +212,8 @@ td {
 }
 
 /* =====================================
-	 BASIC LISTS & SPICE ICONS
-	 ===================================== */
+	   BASIC LISTS & SPICE ICONS
+	   ===================================== */
 
 .spice-list,
 .basic-list {
@@ -237,10 +233,9 @@ td {
 
 .spice-label {
   margin-right: 0.4rem;
-  flex: 0 0 22%; /* fixed width so first chili lines up */
+  flex: 0 0 22%;
 }
 
-/* Align first chili vertically for all rows, but closer to card center */
 .spice-icons {
   display: inline-flex;
   justify-content: flex-start;
@@ -254,8 +249,8 @@ td {
 }
 
 /* =====================================
-	 BADGES / ATTENTION
-	 ===================================== */
+	   BADGES
+	   ===================================== */
 
 .most-popular-badge {
   display: inline-block;
@@ -278,11 +273,12 @@ td {
   background: linear-gradient(135deg, #ffeb3b, #ff9800);
   color: #2b1b00;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 /* =====================================
-	 COMBOS
-	 ===================================== */
+	   COMBOS
+	   ===================================== */
 
 .combos {
   margin-top: 1rem;
@@ -302,7 +298,7 @@ td {
   gap: 0.6rem;
 }
 
-/* ✅ THE ONLY WHITE TEXT ON THE SITE */
+/* Restored consistent combo title styling */
 .combo-title {
   margin: 0;
   font-size: 0.95rem;
@@ -315,6 +311,7 @@ td {
   padding: 0.2rem 0.6rem;
   border-radius: 0.25rem;
   border: 2px solid #000000;
+  white-space: nowrap;
 }
 
 .combo-price-area {
@@ -354,8 +351,8 @@ td {
 }
 
 /* =====================================
-	 FULL ORDERS ONLY (inside Step 1 card)
-	 ===================================== */
+	   FULL ORDERS
+	   ===================================== */
 
 .full-orders {
   margin-top: 0.9rem;
@@ -369,8 +366,8 @@ td {
 }
 
 /* =====================================
-	 ADD-INS & SIDES (also reused for price lists)
-	 ===================================== */
+	   ADD-INS
+	   ===================================== */
 
 .addins-list {
   list-style: none;
@@ -416,14 +413,12 @@ td {
 
 .policy-note {
   font-size: 0.78rem;
-  padding-left: 0;
   color: #333333;
-  font-style: normal;
 }
 
 /* =====================================
-	 FOOTER
-	 ===================================== */
+	   FOOTER
+	   ===================================== */
 
 .site-footer {
   text-align: center;
@@ -435,8 +430,8 @@ td {
 }
 
 /* =====================================
-	 LAYOUT: FRONT (MOBILE FIRST)
-	 ===================================== */
+	   FRONT LAYOUT (MOBILE FIRST)
+	   ===================================== */
 
 .front-layout {
   display: flex;
@@ -445,8 +440,8 @@ td {
 }
 
 /* =====================================
-	 BACK OF MENU LAYOUT (MOBILE)
-	 ===================================== */
+	   BACK LAYOUT (MOBILE)
+	   ===================================== */
 
 .back-layout {
   display: flex;
@@ -454,14 +449,11 @@ td {
   gap: 1rem;
 }
 
-/* Column wrappers for BACK – on mobile, behave like they're not there
-	 so order stays: fried -> fries -> extra -> drinks -> beer */
 .back-left-column,
 .back-right-column {
   display: contents;
 }
 
-/* Drink & beer grids */
 .drinks-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -475,8 +467,27 @@ td {
 }
 
 /* =====================================
-	 DESKTOP LAYOUT
-	 ===================================== */
+	   MOBILE FIX: MOVE SHRIMP PILL TO BOTTOM-RIGHT
+	   ===================================== */
+
+@media (max-width: 768px) {
+  .combos .combo-card:first-of-type {
+    position: relative;
+  }
+
+  .combos .combo-card:first-of-type .promo-badge {
+    position: absolute;
+    right: 0.8rem;
+    bottom: 0.8rem;
+    margin: 0;
+    transform: none;
+    z-index: 5;
+  }
+}
+
+/* =====================================
+	   DESKTOP LAYOUT
+	   ===================================== */
 
 @media (min-width: 900px) {
   .site-header {
@@ -485,9 +496,6 @@ td {
     align-items: center;
   }
 
-  /* FRONT DESKTOP GRID:
-	   Left column: step1, step2, step3
-	   Right column: addins, combos */
   .front-layout {
     display: grid;
     grid-template-columns: 1.4fr 1.1fr;
@@ -511,29 +519,23 @@ td {
 
   .step-3 {
     grid-area: step3;
-    padding-bottom: 0.7rem; /* keep card tight to content */
+    padding-bottom: 0.7rem;
   }
 
   .addins {
     grid-area: addins;
-    padding-bottom: 0.9rem; /* shrink-wrap bottom slightly on desktop */
   }
 
   .combos {
     grid-area: combos;
-    margin-top: 0; /* rely on grid gap only so spacing matches left column */
+    margin-top: 0;
   }
 
   .card {
     padding: 1.1rem 1.2rem;
   }
 
-  /* =====================================
-	   BACK DESKTOP GRID – REFACTORED
-	   Two independent columns, each flex-stacked
-	   so card spacing on the right behaves like the front.
-	   ===================================== */
-
+  /* BACK DESKTOP GRID */
   .back-layout {
     display: grid;
     grid-template-columns: 1.4fr 1.1fr;
@@ -547,13 +549,10 @@ td {
   .back-right-column {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem; /* same vertical spacing as front cards */
+    gap: 1.25rem;
   }
 
-  /* Desktop right-column visual order:
-	   Extra (top) -> Drinks (middle) -> Beer (bottom),
-	   while mobile uses DOM order. */
-
+  /* Desktop order: Extra -> Drinks -> Beer */
   .extra-dishes-section {
     order: 1;
   }
@@ -566,42 +565,11 @@ td {
     order: 3;
   }
 
-  /* spacing is controlled by column gap now */
-  .fried-section,
-  .fries-section,
-  .extra-dishes-section,
-  .beer-section,
-  .drinks-section {
-    margin-bottom: 0;
-  }
-
-  /* Drinks grids on desktop: two columns */
   .drinks-grid {
     grid-template-columns: 1fr 1fr;
   }
 
   .beer-grid {
     grid-template-columns: 1fr 1fr;
-  }
-}
-
-/* =====================================
-	 MOBILE – "MAKE IT ALL SHRIMP" as a sticker
-	 on #1 Shrimp Star only
-	 ===================================== */
-
-@media (max-width: 899.98px) {
-  /* Second combo-card article = #1 Shrimp Star
-	   (first is Cajun Special) */
-  .combos article:nth-of-type(2) {
-    position: relative;
-    /* no extra bottom padding, keep same height logic as others */
-  }
-
-  .combos article:nth-of-type(2) .combo-header .promo-badge {
-    position: absolute;
-    right: 0.9rem;
-    bottom: -0.4rem; /* sticker: slightly below the bottom of the text area */
-    /* pill can overlap the card edge a bit; no overflow hidden on card */
   }
 }
