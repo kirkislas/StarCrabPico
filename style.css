@@ -466,6 +466,62 @@ td {
 }
 
 /* =====================================
+	 SMALL-PHONE TWEAKS (OPTIONAL)
+	 ===================================== */
+
+@media (max-width: 390px) {
+  .combo-header {
+    gap: 0.3rem;
+  }
+
+  .combo-title {
+    font-size: 0.85rem;
+    padding: 0.15rem 0.45rem;
+    white-space: nowrap;
+  }
+
+  .promo-badge {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.4rem;
+    white-space: nowrap;
+  }
+}
+
+/* =====================================
+	 MOBILE COMBO HEADER LAYOUT
+	 (PRICE TOP-RIGHT, CHIP UNDER PRICE)
+	 ===================================== */
+
+@media (max-width: 480px) {
+  .combo-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.4rem;
+  }
+
+  /* Right side: price + chip stacked vertically */
+  .combo-price-area {
+    display: flex;
+    flex-direction: column; /* price row 1, chip row 2 */
+    align-items: flex-end; /* align both to the right edge */
+    gap: 0.15rem;
+  }
+
+  .combo-price {
+    font-size: 0.9rem;
+  }
+
+  .promo-badge {
+    font-size: 0.7rem;
+    padding: 0.12rem 0.45rem;
+    white-space: nowrap; /* keep on one line as much as possible */
+    line-height: 1.2;
+    text-align: right;
+  }
+}
+
+/* =====================================
 	 MOBILE-ONLY TWEAKS
 	 ===================================== */
 
@@ -473,41 +529,6 @@ td {
   /* Push chili column slightly to the right on mobile */
   .spice-icons {
     margin-left: 1.5rem;
-  }
-}
-
-/* =====================================
-	 MOBILE PILL PLACEMENT (#1 SHRIMP STAR)
-	 ===================================== */
-
-@media (max-width: 480px) {
-  /* Keep header from getting weird on small phones */
-  .combo-header {
-    gap: 0.5rem;
-    align-items: center;
-  }
-
-  /* Make #1 Shrimp Star card a positioning context,
-	   with extra space at the bottom so the pill
-	   doesn't collide with the next card */
-  .combos .combo-card:nth-of-type(2) {
-    position: relative;
-    overflow: visible;
-    padding-bottom: 1.2rem;
-  }
-
-  /* Turn the yellow pill into a sticker hanging
-	   near the "Great for parties of 2–3 people" line */
-  .combos .combo-card:nth-of-type(2) .promo-badge {
-    position: absolute;
-    right: -2rem; /* how far from the right edge */
-    bottom: 2.4rem; /* how far above the bottom of the card */
-    z-index: 5;
-
-    font-size: 0.72rem;
-    padding: 0.15rem 0.5rem;
-    white-space: nowrap;
-    line-height: 1.2;
   }
 }
 
