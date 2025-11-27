@@ -469,26 +469,30 @@ td {
 	 MOBILE LAYOUT FOR COMBO HEADER
 	 ===================================== */
 
+/* =====================================
+   MOBILE LAYOUT FOR COMBO HEADER
+   ===================================== */
+
 @media (max-width: 480px) {
+  /* General mobile behavior for ALL combos */
   .combo-header {
-    gap: 0.3rem; /* tighter gap on phones */
+    gap: 0.3rem;
     align-items: flex-start;
-    flex-wrap: wrap; /* allow a second row if needed */
+    flex-wrap: wrap; /* lets things wrap nicely if needed */
   }
 
   .combo-title {
     font-size: 0.85rem;
     padding: 0.15rem 0.45rem;
     white-space: nowrap;
-    margin-bottom: 0.1rem; /* tiny space under the black pill */
+    margin-bottom: 0.1rem;
   }
 
   .combo-price-area {
-    margin-left: auto; /* pushes price area to the right */
+    margin-left: auto; /* push price area to the right */
     display: flex;
-    flex-direction: column; /* row 1: price, row 2: chip */
+    flex-direction: column; /* price on top, chip “belongs” to it */
     align-items: flex-end;
-    max-width: 60%; /* prevents it from being too wide */
   }
 
   .combo-price {
@@ -496,12 +500,26 @@ td {
   }
 
   .promo-badge {
-    margin-top: 0.15rem; /* space under the price */
     font-size: 0.7rem;
     padding: 0.15rem 0.4rem;
     line-height: 1.2;
     text-align: right;
-    white-space: normal; /* allow wrapping inside the card */
+    white-space: nowrap;
+    margin-top: 0; /* default: no extra gap on mobile */
+  }
+
+  /* SPECIAL CASE: #1 Shrimp Star chip half on / half off the card */
+  .combos .combo-card:first-of-type {
+    position: relative; /* make the card the positioning context */
+  }
+
+  .combos .combo-card:first-of-type .promo-badge {
+    position: absolute;
+    top: 0; /* align with top edge of the card */
+    right: 0.9rem; /* keep it near the price */
+    transform: translateY(-50%); /* half above, half below the top edge */
+    z-index: 5;
+    margin-top: 0; /* override any inherited margin */
   }
 }
 
