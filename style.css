@@ -467,31 +467,27 @@ td {
 
 /* =====================================
 	 MOBILE LAYOUT FOR COMBO HEADER
+	 (phones & small tablets)
 	 ===================================== */
 
-/* =====================================
-   MOBILE LAYOUT FOR COMBO HEADER
-   ===================================== */
-
-@media (max-width: 480px) {
-  /* General mobile behavior for ALL combos */
+@media (max-width: 900px) {
+  /* General combo header tweaks on smaller screens */
   .combo-header {
     gap: 0.3rem;
     align-items: flex-start;
-    flex-wrap: wrap; /* lets things wrap nicely if needed */
+    flex-wrap: wrap;
   }
 
   .combo-title {
     font-size: 0.85rem;
     padding: 0.15rem 0.45rem;
-    white-space: nowrap;
     margin-bottom: 0.1rem;
   }
 
   .combo-price-area {
-    margin-left: auto; /* push price area to the right */
+    margin-left: auto;
     display: flex;
-    flex-direction: column; /* price on top, chip “belongs” to it */
+    flex-direction: column;
     align-items: flex-end;
   }
 
@@ -505,21 +501,21 @@ td {
     line-height: 1.2;
     text-align: right;
     white-space: nowrap;
-    margin-top: 0; /* default: no extra gap on mobile */
+    margin-top: 0;
   }
 
-  /* SPECIAL CASE: #1 Shrimp Star chip half on / half off the card */
+  /* #1 Shrimp Star: chip as a “sticker” half on / half off the top */
   .combos .combo-card:first-of-type {
-    position: relative; /* make the card the positioning context */
+    position: relative; /* card becomes positioning context */
   }
 
   .combos .combo-card:first-of-type .promo-badge {
     position: absolute;
-    top: 0; /* align with top edge of the card */
-    right: 0.9rem; /* keep it near the price */
-    transform: translateY(-50%); /* half above, half below the top edge */
+    top: 0; /* stick to top edge of the card */
+    left: 50%; /* center horizontally */
+    transform: translate(-50%, -50%); /* half above, half below */
     z-index: 5;
-    margin-top: 0; /* override any inherited margin */
+    margin-top: 0;
   }
 }
 
@@ -584,12 +580,10 @@ td {
     padding: 1.1rem 1.2rem;
   }
 
-  /* Reset chili margin so desktop stays where you liked it */
   .spice-icons {
     margin-left: 0;
   }
 
-  /* BACK DESKTOP GRID */
   .back-layout {
     display: grid;
     grid-template-columns: 1.4fr 1.1fr;
@@ -606,7 +600,6 @@ td {
     gap: 1.25rem;
   }
 
-  /* Desktop order: Extra -> Drinks -> Beer */
   .extra-dishes-section {
     order: 1;
   }
