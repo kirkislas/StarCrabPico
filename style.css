@@ -466,52 +466,21 @@ td {
 }
 
 /* =====================================
-	 SMALL-PHONE TWEAKS (TEXT A LITTLE SMALLER)
-	 ===================================== */
-
-@media (max-width: 390px) {
-  .combo-header {
-    gap: 0.3rem;
-  }
-
-  .combo-title {
-    font-size: 0.85rem;
-    padding: 0.15rem 0.45rem;
-    white-space: nowrap;
-  }
-
-  .promo-badge {
-    font-size: 0.7rem;
-    padding: 0.15rem 0.4rem;
-    white-space: nowrap;
-  }
-}
-
-/* =====================================
-	 MOBILE-ONLY TWEAKS
-	 ===================================== */
-
-@media (max-width: 899px) {
-  /* Push chili column slightly to the right on mobile */
-  .spice-icons {
-    margin-left: 1.5rem;
-  }
-}
-
-/* =====================================
-	 MOBILE LAYOUT FOR COMBO HEADER (GENERAL)
+	 MOBILE LAYOUT FOR COMBO HEADER
 	 ===================================== */
 
 @media (max-width: 480px) {
+  /* General mobile behavior for ALL combos */
   .combo-header {
     gap: 0.3rem;
     align-items: flex-start;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* allow wrapping if needed */
   }
 
   .combo-title {
     font-size: 0.85rem;
     padding: 0.15rem 0.45rem;
+    white-space: nowrap;
     margin-bottom: 0.1rem;
   }
 
@@ -537,21 +506,44 @@ td {
 }
 
 /* =====================================
-	 MOBILE STICKER FOR #1 SHRIMP STAR
-	 (CLEAN, NO !IMPORTANT)
+	 MOBILE-ONLY TWEAKS
+	 ===================================== */
+
+@media (max-width: 899px) {
+  /* Push chili column slightly to the right on mobile */
+  .spice-icons {
+    margin-left: 1.5rem;
+  }
+}
+
+/* =====================================
+	 MOBILE: #1 SHRIMP STAR PILL AS STICKER
 	 ===================================== */
 
 @media (max-width: 900px) {
-  /* make the first combo card the positioning context */
-  .combos .combo-card:first-of-type {
-    position: relative;
+  /* #1 Shrimp Star is the 2nd combo card (after Cajun Special) */
+  .combos .combo-card:nth-of-type(2) {
+    position: relative; /* positioning context for the pill */
   }
 
-  /* make the promo pill a half-on / half-off sticker */
-  .combos .combo-card:first-of-type .promo-badge {
+  .combos .combo-card:nth-of-type(2) .promo-badge {
     position: absolute;
-    top: -0.45rem; /* tweak this up/down to taste */
-    right: 0.9rem;
+    right: 0.75rem; /* tweak left/right */
+    bottom: 0.4rem; /* tweak up/down relative to bottom text */
+    transform: translateY(50%); /* half on, half off the card */
+    z-index: 5;
+  }
+
+  /* MOBILE SAFETY NET (NO SIDEWAYS SCROLL) */
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .page {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 }
 
@@ -646,29 +638,5 @@ td {
 
   .beer-grid {
     grid-template-columns: 1fr 1fr;
-  }
-}
-
-/* =====================================
-	 MOBILE SAFETY NET (NO SIDEWAYS SCROLL)
-	 ===================================== */
-
-/* =====================================
-   MOBILE STICKER FOR #1 SHRIMP STAR
-   (CLEAN, NO !IMPORTANT)
-   ===================================== */
-
-@media (max-width: 900px) {
-  /* In .combos, the 2nd card is #1 Shrimp Star */
-  .combos .combo-card:nth-of-type(2) {
-    position: relative; /* card = positioning context */
-  }
-
-  .combos .combo-card:nth-of-type(2) .promo-badge {
-    position: absolute;
-    top: 0; /* sit on the top edge */
-    left: 23%; /* horizontally centered on the card */
-    transform: translate(-50%, -50%); /* half above, half below */
-    z-index: 5;
   }
 }
