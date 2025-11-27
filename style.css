@@ -667,7 +667,7 @@ td {
   .combos .combo-card:nth-of-type(2) .promo-badge {
     position: absolute;
     top: 0; /* sit on the top edge */
-    left: 20%; /* horizontally centered on the card */
+    left: 23%; /* horizontally centered on the card */
     transform: translate(-50%, -50%); /* half above, half below */
     z-index: 5;
   }
