@@ -500,8 +500,8 @@ td {
 	   near the "Great for parties of 2–3 people" line */
   .combos .combo-card:nth-of-type(2) .promo-badge {
     position: absolute;
-    right: 0.9rem; /* how far from the right edge */
-    bottom: 0.35rem; /* how far above the bottom of the card */
+    right: 2rem; /* how far from the right edge */
+    bottom: 0.6rem; /* how far above the bottom of the card */
     z-index: 5;
 
     font-size: 0.72rem;
