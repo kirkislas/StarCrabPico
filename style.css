@@ -477,11 +477,11 @@ td {
     white-space: nowrap;
   }
 
-  /* smaller chip, but allow wrapping */
+  /* slightly smaller, allowed to wrap */
   .promo-badge {
     font-size: 0.7rem;
     padding: 0.15rem 0.4rem;
-    white-space: normal; /* <— THIS is the big change */
+    white-space: normal;
     line-height: 1.2;
   }
 }
@@ -508,12 +508,15 @@ td {
     display: flex;
     flex-direction: column; /* price on row 1, chip on row 2 */
     align-items: flex-end;
+    max-width: 55%;
   }
 
   .promo-badge {
     margin-top: 0.25rem; /* space under the price */
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     padding: 0.15rem 0.5rem;
+    white-space: normal; /* can wrap if needed */
+    line-height: 1.2;
     text-align: right;
   }
 }
