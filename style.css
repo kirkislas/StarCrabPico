@@ -466,12 +466,43 @@ td {
 }
 
 /* =====================================
-	 MOBILE LAYOUT FOR COMBO HEADER
-	 (phones & small tablets)
+	 SMALL-PHONE TWEAKS (TEXT A LITTLE SMALLER)
 	 ===================================== */
 
-@media (max-width: 900px) {
-  /* General combo header tweaks on smaller screens */
+@media (max-width: 390px) {
+  .combo-header {
+    gap: 0.3rem;
+  }
+
+  .combo-title {
+    font-size: 0.85rem;
+    padding: 0.15rem 0.45rem;
+    white-space: nowrap;
+  }
+
+  .promo-badge {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.4rem;
+    white-space: nowrap;
+  }
+}
+
+/* =====================================
+	 MOBILE-ONLY TWEAKS
+	 ===================================== */
+
+@media (max-width: 899px) {
+  /* Push chili column slightly to the right on mobile */
+  .spice-icons {
+    margin-left: 1.5rem;
+  }
+}
+
+/* =====================================
+	 MOBILE LAYOUT FOR COMBO HEADER (GENERAL)
+	 ===================================== */
+
+@media (max-width: 480px) {
   .combo-header {
     gap: 0.3rem;
     align-items: flex-start;
@@ -503,30 +534,24 @@ td {
     white-space: nowrap;
     margin-top: 0;
   }
-
-  /* #1 Shrimp Star: chip as a “sticker” half on / half off the top */
-  .combos .combo-card:first-of-type {
-    position: relative; /* card becomes positioning context */
-  }
-
-  .combos .combo-card:first-of-type .promo-badge {
-    position: absolute;
-    top: 0; /* stick to top edge of the card */
-    left: 50%; /* center horizontally */
-    transform: translate(-50%, -50%); /* half above, half below */
-    z-index: 5;
-    margin-top: 0;
-  }
 }
 
 /* =====================================
-	 MOBILE-ONLY TWEAKS
+	 MOBILE STICKER FOR #1 SHRIMP STAR
+	 (CLEAN, NO !IMPORTANT)
 	 ===================================== */
 
-@media (max-width: 899px) {
-  /* Push chili column slightly to the right on mobile */
-  .spice-icons {
-    margin-left: 1.5rem;
+@media (max-width: 900px) {
+  /* make the first combo card the positioning context */
+  .combos .combo-card:first-of-type {
+    position: relative;
+  }
+
+  /* make the promo pill a half-on / half-off sticker */
+  .combos .combo-card:first-of-type .promo-badge {
+    position: absolute;
+    top: -0.45rem; /* tweak this up/down to taste */
+    right: 0.9rem;
   }
 }
 
@@ -580,10 +605,12 @@ td {
     padding: 1.1rem 1.2rem;
   }
 
+  /* Reset chili margin so desktop stays where you liked it */
   .spice-icons {
     margin-left: 0;
   }
 
+  /* BACK DESKTOP GRID */
   .back-layout {
     display: grid;
     grid-template-columns: 1.4fr 1.1fr;
@@ -600,6 +627,7 @@ td {
     gap: 1.25rem;
   }
 
+  /* Desktop order: Extra -> Drinks -> Beer */
   .extra-dishes-section {
     order: 1;
   }
