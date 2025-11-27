@@ -34,8 +34,8 @@ body {
 }
 
 /* =====================================
-	   HEADER & FRONT/BACK TOGGLE
-	   ===================================== */
+	 HEADER & FRONT/BACK TOGGLE
+	 ===================================== */
 
 .site-header {
   padding: 1rem 1.25rem;
@@ -86,8 +86,8 @@ body {
 }
 
 /* =====================================
-	   PAGE & PANELS
-	   ===================================== */
+	 PAGE & PANELS
+	 ===================================== */
 
 .page {
   padding: 1rem;
@@ -105,8 +105,8 @@ body {
 }
 
 /* =====================================
-	   CARDS
-	   ===================================== */
+	 CARDS
+	 ===================================== */
 
 .card {
   background: #ffffff;
@@ -119,8 +119,8 @@ body {
 }
 
 /* =====================================
-	   HEADINGS
-	   ===================================== */
+	 HEADINGS
+	 ===================================== */
 
 .section-heading {
   margin: 0 0 0.6rem;
@@ -149,8 +149,8 @@ body {
 }
 
 /* =====================================
-	   TABLES
-	   ===================================== */
+	 TABLES
+	 ===================================== */
 
 table {
   width: 100%;
@@ -185,8 +185,8 @@ td {
 }
 
 /* =====================================
-	   DISCLAIMERS
-	   ===================================== */
+	 DISCLAIMERS
+	 ===================================== */
 
 .disclaimer {
   margin-top: 0.7rem;
@@ -212,8 +212,8 @@ td {
 }
 
 /* =====================================
-	   BASIC LISTS & SPICE ICONS
-	   ===================================== */
+	 BASIC LISTS & SPICE ICONS
+	 ===================================== */
 
 .spice-list,
 .basic-list {
@@ -249,8 +249,8 @@ td {
 }
 
 /* =====================================
-	   BADGES
-	   ===================================== */
+	 BADGES
+	 ===================================== */
 
 .most-popular-badge {
   display: inline-block;
@@ -277,8 +277,8 @@ td {
 }
 
 /* =====================================
-	   COMBOS
-	   ===================================== */
+	 COMBOS
+	 ===================================== */
 
 .combos {
   margin-top: 1rem;
@@ -350,8 +350,8 @@ td {
 }
 
 /* =====================================
-	   FULL ORDERS
-	   ===================================== */
+	 FULL ORDERS
+	 ===================================== */
 
 .full-orders {
   margin-top: 0.9rem;
@@ -365,8 +365,8 @@ td {
 }
 
 /* =====================================
-	   ADD-INS
-	   ===================================== */
+	 ADD-INS
+	 ===================================== */
 
 .addins-list {
   list-style: none;
@@ -416,8 +416,8 @@ td {
 }
 
 /* =====================================
-	   FOOTER
-	   ===================================== */
+	 FOOTER
+	 ===================================== */
 
 .site-footer {
   text-align: center;
@@ -429,8 +429,8 @@ td {
 }
 
 /* =====================================
-	   FRONT LAYOUT (MOBILE FIRST)
-	   ===================================== */
+	 FRONT LAYOUT (MOBILE FIRST)
+	 ===================================== */
 
 .front-layout {
   display: flex;
@@ -439,8 +439,8 @@ td {
 }
 
 /* =====================================
-	   BACK LAYOUT (MOBILE)
-	   ===================================== */
+	 BACK LAYOUT (MOBILE)
+	 ===================================== */
 
 .back-layout {
   display: flex;
@@ -465,7 +465,10 @@ td {
   color: #111111;
 }
 
-/* Small-phone tweak: keep combo pills on one line but make them a bit narrower */
+/* =====================================
+	 SMALL-PHONE TWEAKS (TEXT A LITTLE SMALLER)
+	 ===================================== */
+
 @media (max-width: 390px) {
   .combo-header {
     gap: 0.3rem;
@@ -477,18 +480,16 @@ td {
     white-space: nowrap;
   }
 
-  /* slightly smaller, allowed to wrap */
   .promo-badge {
     font-size: 0.7rem;
     padding: 0.15rem 0.4rem;
-    white-space: normal;
-    line-height: 1.2;
+    white-space: nowrap;
   }
 }
 
 /* =====================================
-	   MOBILE-ONLY TWEAKS
-	   ===================================== */
+	 MOBILE-ONLY TWEAKS
+	 ===================================== */
 
 @media (max-width: 899px) {
   /* Push chili column slightly to the right on mobile */
@@ -497,37 +498,50 @@ td {
   }
 }
 
-/* Mobile-only: move shrimp promo pill to bottom-right */
+/* =====================================
+	 COMBO #1: MOBILE LAYOUT FOR PRICE + CHIP
+	 ===================================== */
+
 @media (max-width: 768px) {
-  /* keep header nice and tight on mobile */
-  .combo-header {
+  /* Make this card a positioning context */
+  .combos .combo-card:first-of-type {
+    position: relative;
+  }
+
+  /* Price: lock it in top-right INSIDE the card */
+  .combos .combo-card:first-of-type .combo-price {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.8rem;
+  }
+
+  /* Give the header a little right padding so the pill
+	   text doesn't crash into the price area visually */
+  .combos .combo-card:first-of-type .combo-header {
+    padding-right: 3.2rem;
+  }
+
+  /* We only care about the badge inside this container on mobile */
+  .combos .combo-card:first-of-type .combo-price-area {
     align-items: flex-start;
   }
 
-  .combo-price-area {
-    display: flex;
-    flex-direction: column; /* price on row 1, chip on row 2 */
-    align-items: flex-end;
-    max-width: 55%;
-  }
-
-  .promo-badge {
-    margin-top: 0.25rem; /* space under the price */
-    font-size: 0.75rem;
-    padding: 0.15rem 0.5rem;
-    white-space: normal; /* can wrap if needed */
+  /* Yellow chip: bottom-right, slightly "hanging" look */
+  .combos .combo-card:first-of-type .promo-badge {
+    position: absolute;
+    right: 0.8rem;
+    bottom: 0.8rem;
+    margin: 0;
+    transform: none;
+    z-index: 5;
     line-height: 1.2;
     text-align: right;
   }
 }
 
 /* =====================================
-	   DESKTOP LAYOUT
-	   ===================================== */
-
-/* =====================================
-   DESKTOP LAYOUT
-   ===================================== */
+	 DESKTOP LAYOUT
+	 ===================================== */
 
 @media (min-width: 900px) {
   .site-header {
@@ -620,7 +634,7 @@ td {
 }
 
 /* =====================================
-	 MOBILE SAFETY NET
+	 MOBILE SAFETY NET (NO SIDEWAYS SCROLL)
 	 ===================================== */
 
 @media (max-width: 900px) {
