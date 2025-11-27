@@ -466,46 +466,6 @@ td {
 }
 
 /* =====================================
-	 MOBILE LAYOUT FOR COMBO HEADER
-	 ===================================== */
-
-@media (max-width: 480px) {
-  /* General mobile behavior for ALL combos */
-  .combo-header {
-    gap: 0.3rem;
-    align-items: flex-start;
-    flex-wrap: wrap; /* allow wrapping if needed */
-  }
-
-  .combo-title {
-    font-size: 0.85rem;
-    padding: 0.15rem 0.45rem;
-    white-space: nowrap;
-    margin-bottom: 0.1rem;
-  }
-
-  .combo-price-area {
-    margin-left: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-
-  .combo-price {
-    font-size: 0.9rem;
-  }
-
-  .promo-badge {
-    font-size: 0.7rem;
-    padding: 0.15rem 0.4rem;
-    line-height: 1.2;
-    text-align: right;
-    white-space: nowrap;
-    margin-top: 0;
-  }
-}
-
-/* =====================================
 	 MOBILE-ONLY TWEAKS
 	 ===================================== */
 
@@ -517,33 +477,38 @@ td {
 }
 
 /* =====================================
-	 MOBILE: #1 SHRIMP STAR PILL AS STICKER
+	 MOBILE PILL PLACEMENT (#1 SHRIMP STAR)
 	 ===================================== */
 
-@media (max-width: 900px) {
-  /* #1 Shrimp Star is the 2nd combo card (after Cajun Special) */
-  .combos .combo-card:nth-of-type(2) {
-    position: relative; /* positioning context for the pill */
+@media (max-width: 480px) {
+  /* Keep header from getting weird on small phones */
+  .combo-header {
+    gap: 0.5rem;
+    align-items: center;
   }
 
+  /* Make #1 Shrimp Star card a positioning context,
+	   with extra space at the bottom so the pill
+	   doesn't collide with the next card */
+  .combos .combo-card:nth-of-type(2) {
+    position: relative;
+    overflow: visible;
+    padding-bottom: 1.2rem;
+  }
+
+  /* Turn the yellow pill into a sticker hanging
+	   near the "Great for parties of 2–3 people" line */
   .combos .combo-card:nth-of-type(2) .promo-badge {
     position: absolute;
-    right: 0.75rem; /* tweak left/right */
-    bottom: 0.4rem; /* tweak up/down relative to bottom text */
-    transform: translateY(50%); /* half on, half off the card */
+    right: 0.9rem; /* hugs the right edge */
+    bottom: -0.55rem; /* half on / half off the card */
+    transform: translateY(0%);
     z-index: 5;
-  }
 
-  /* MOBILE SAFETY NET (NO SIDEWAYS SCROLL) */
-  html,
-  body {
-    overflow-x: hidden;
-  }
-
-  .page {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
+    font-size: 0.72rem;
+    padding: 0.15rem 0.5rem;
+    white-space: nowrap;
+    line-height: 1.2;
   }
 }
 
@@ -638,5 +603,22 @@ td {
 
   .beer-grid {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* =====================================
+	 MOBILE SAFETY NET (NO SIDEWAYS SCROLL)
+	 ===================================== */
+
+@media (max-width: 900px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .page {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 }
