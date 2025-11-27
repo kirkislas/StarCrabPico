@@ -519,16 +519,13 @@ td {
     line-height: 1.2;
     text-align: right;
   }
-}
+  .spice-label {
+    flex: 0 0 30%; /* a bit more width for "Extra Spicy" */
+    white-space: nowrap; /* don't let it break onto two lines */
+  }
 
-/* =====================================
-	 MOBILE-ONLY TWEAKS
-	 ===================================== */
-
-@media (max-width: 899px) {
-  /* Push chili column slightly to the right on mobile */
   .spice-icons {
-    margin-left: 1.5rem;
+    margin-left: 0.5rem; /* slightly smaller push so we don't steal too much space */
   }
 }
 
