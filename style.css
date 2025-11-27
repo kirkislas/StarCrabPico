@@ -466,24 +466,42 @@ td {
 }
 
 /* =====================================
-	 SMALL-PHONE TWEAKS (TEXT A LITTLE SMALLER)
+	 MOBILE LAYOUT FOR COMBO HEADER
 	 ===================================== */
 
-@media (max-width: 390px) {
+@media (max-width: 480px) {
   .combo-header {
-    gap: 0.3rem;
+    gap: 0.3rem; /* tighter gap on phones */
+    align-items: flex-start;
+    flex-wrap: wrap; /* allow a second row if needed */
   }
 
   .combo-title {
     font-size: 0.85rem;
     padding: 0.15rem 0.45rem;
     white-space: nowrap;
+    margin-bottom: 0.1rem; /* tiny space under the black pill */
+  }
+
+  .combo-price-area {
+    margin-left: auto; /* pushes price area to the right */
+    display: flex;
+    flex-direction: column; /* row 1: price, row 2: chip */
+    align-items: flex-end;
+    max-width: 60%; /* prevents it from being too wide */
+  }
+
+  .combo-price {
+    font-size: 0.9rem;
   }
 
   .promo-badge {
+    margin-top: 0.15rem; /* space under the price */
     font-size: 0.7rem;
     padding: 0.15rem 0.4rem;
-    white-space: nowrap;
+    line-height: 1.2;
+    text-align: right;
+    white-space: normal; /* allow wrapping inside the card */
   }
 }
 
@@ -495,36 +513,6 @@ td {
   /* Push chili column slightly to the right on mobile */
   .spice-icons {
     margin-left: 1.5rem;
-  }
-}
-
-/* =====================================
-   COMBO #1: MOBILE LAYOUT FOR CHIP ONLY
-   ===================================== */
-
-@media (max-width: 768px) {
-  /* Make the first combo card a positioning context */
-  .combos .combo-card:first-of-type {
-    position: relative;
-  }
-
-  /* Yellow chip: smaller + hanging off bottom-right */
-  .combos .combo-card:first-of-type .promo-badge {
-    position: absolute;
-    right: 0.8rem;
-    bottom: 0.75rem;
-    margin: 0;
-    z-index: 5;
-
-    /* slightly smaller chip */
-    font-size: 0.7rem;
-    padding: 0.15rem 0.45rem;
-
-    /* tiny nudge so it “hangs” a bit off the card */
-    transform: translateX(8%);
-    white-space: nowrap;
-    line-height: 1.2;
-    text-align: right;
   }
 }
 
