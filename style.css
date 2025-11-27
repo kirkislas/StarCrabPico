@@ -499,41 +499,30 @@ td {
 }
 
 /* =====================================
-	 COMBO #1: MOBILE LAYOUT FOR PRICE + CHIP
-	 ===================================== */
+   COMBO #1: MOBILE LAYOUT FOR CHIP ONLY
+   ===================================== */
 
 @media (max-width: 768px) {
-  /* Make this card a positioning context */
+  /* Make the first combo card a positioning context */
   .combos .combo-card:first-of-type {
     position: relative;
   }
 
-  /* Price: lock it in top-right INSIDE the card */
-  .combos .combo-card:first-of-type .combo-price {
-    position: absolute;
-    top: 0.75rem;
-    right: 0.8rem;
-  }
-
-  /* Give the header a little right padding so the pill
-	   text doesn't crash into the price area visually */
-  .combos .combo-card:first-of-type .combo-header {
-    padding-right: 3.2rem;
-  }
-
-  /* We only care about the badge inside this container on mobile */
-  .combos .combo-card:first-of-type .combo-price-area {
-    align-items: flex-start;
-  }
-
-  /* Yellow chip: bottom-right, slightly "hanging" look */
+  /* Yellow chip: smaller + hanging off bottom-right */
   .combos .combo-card:first-of-type .promo-badge {
     position: absolute;
     right: 0.8rem;
-    bottom: 0.8rem;
+    bottom: 0.75rem;
     margin: 0;
-    transform: none;
     z-index: 5;
+
+    /* slightly smaller chip */
+    font-size: 0.7rem;
+    padding: 0.15rem 0.45rem;
+
+    /* tiny nudge so it “hangs” a bit off the card */
+    transform: translateX(8%);
+    white-space: nowrap;
     line-height: 1.2;
     text-align: right;
   }
